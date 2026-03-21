@@ -1,0 +1,163 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[
+  a4paper,
+  left=0.6in,
+  right=0.6in,
+  top=0.4in,
+  bottom=0.4in
+]{geometry}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}{1em}{}
+  [\hfill\leaders\hrule\hfill]  % This adds the line on the same line
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\setmainfont{Inter}[
+  UprightFont = *-Regular,
+  % BoldFont = *-SemiBold,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-SemiBoldItalic
+]
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{tabularx}
+
+\renewcommand{\normalsize}{\fontsize{10}{14}\selectfont}
+
+% \definecolor{mediumgray}{gray}{0.4} % 0 = black, 1 = white
+\definecolor{lighttext}{gray}{0.2} % 0 = black, 1 = white
+\definecolor{blue}{HTML}{262f99}
+
+\newcommand{\thinname}{\fontspec{Inter Light}}
+\newcommand{\extralight}{\fontspec{Inter ExtraLight}}
+\newcommand{\spaced}[2]{%
+  {\fontsize{#1}{24}\selectfont\addfontfeature{LetterSpace=10}#2}%
+}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=lighttext,
+}
+
+% \setlist[itemize]{noitemsep, topsep=2pt}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=10pt, font={\fontsize{9}{14}\thinname\selectfont}}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+
+\begin{document}
+\color{lighttext}
+
+%--------------------
+% Header
+%--------------------
+
+\begin{center}
+{\fontsize{30}{0}\selectfont {\extralight\color{blue} Mateo} \textbf{Torres}}\\
+\vspace{0.5em}
+\color{blue}
+\spaced{8}{S}\spaced{6}{YSTEMS}
+\spaced{8}{E}\spaced{6}{NGINEER \textbf{·}}
+\spaced{8}{D}\spaced{6}{EVELOPER}
+\end{center}
+
+\vspace{-0.5em}
+
+\begin{center}
+{\fontsize{8.5}{0}\selectfont
+\addfontfeature{LetterSpace=1.5}
+\faEnvelope\ \href{mailto:mateotorresvara@gmail.com}{mateotorresvara@gmail.com} \quad
+\faHome\ \href{https://mateotorres.com}{mateotorres.com} \quad
+\faGithub\ \href{https://github.com/MateoTVara}{mateotorres}
+}
+\end{center}
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont Professional Summary} \hfill \rule{0.68\linewidth}{1.2pt}
+
+Detail-oriented Systems Engineering undergraduate and Information Systems Development technician 
+with a focus on web development and a strong interest in computer science. Experienced in building 
+front-end websites for small businesses and deploying practical solutions, with solid hands-on 
+knowledge of Linux systems, particularly Arch and Nix-based environments. Skilled in developing 
+user-focused, maintainable web applications and continuously expanding expertise in programming, 
+Linux ecosystems, and modern development workflows. Passionate about learning, problem-solving, 
+and creating practical software solutions.
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont Experience} \hfill \rule{0.84\linewidth}{1.2pt}
+
+\vspace{-0.3em}
+
+\textbf{Work Experience} \hfill Lima, Peru\\
+\spaced{10}{F}\spaced{8}{REELANCE} \hfill {\fontsize{8}{10}\extralight\selectfont Nov. 2025 - Present}
+
+\vspace{-0.8em}
+
+\begin{itemize}[leftmargin=10pt, label={\fontsize{9.5}{9.5}\selectfont\textbullet}]
+\item {\fontsize{9.5}{14}\extralight\selectfont Developed and maintained websites for local businesses.}
+\item {\fontsize{9.5}{14}\extralight\selectfont Implemented responsive designs and optimized performance for improved user experience.}
+\end{itemize}
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont Projects} \hfill \rule{0.88\linewidth}{1.2pt}
+
+\vspace{-0.3em}
+
+\textbf{odin-monorepo} \hfill \href{https://github.com/MateoTVara/odin-monorepo}{\faGithub\ MateoTVara/odin-monorepo}\\
+\spaced{9.5}{D}\spaced{7.5}{ESIGNER}/\spaced{9.5}{D}\spaced{7.5}{EVELOPER} \hfill {\fontsize{8}{10}\extralight\selectfont Jul. 2025 - Present}
+
+\vspace{-0.8em}
+
+\begin{itemize}[leftmargin=10pt, label={\fontsize{9.5}{9.5}\selectfont\textbullet}]
+\item {\fontsize{9.5}{14}\extralight\selectfont Organized a personal monorepo showcasing progression through full-stack web development projects completed while working through The Odin Project curriculum.} 
+\item {\fontsize{9.5}{14}\extralight\selectfont Developed and grouped multiple frontend foundational projects (HTML, CSS, JavaScript, and React) alongside backend Node.js applications to demonstrate a range of web development skills.} 
+\item {\fontsize{9.5}{14}\extralight\selectfont Applied practical tooling and learning workflows, managing independent project setups and scripts within a single structured codebase.} 
+\end{itemize}
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont Skills} \hfill \rule{0.92\linewidth}{1.2pt}
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{}l @{\hspace{9em}} X@{}}
+\textbf{\fontsize{11}{14}\selectfont Languages} & {\fontsize{10}{12}\extralight\selectfont {\fontsize{10}{12}\extralight\selectfont\textbf{JavaScript/TypeScript}}, Python, Rust} \\
+\textbf{\fontsize{11}{14}\selectfont Frameworks} & {\fontsize{10}{12}\extralight\selectfont \textbf{React}, \textbf{Node.js}, \textbf{Express}, Prisma, Astro, Svelte} \\
+\textbf{\fontsize{11}{14}\selectfont DevOps} & {\fontsize{10}{12}\extralight\selectfont \textbf{Linux (Arch)}, GitHub Actions, Bash, Nix/NixOS} \\
+\textbf{\fontsize{11}{14}\selectfont Programs} & {\fontsize{10}{12}\extralight\selectfont \textbf{Git}, \textbf{Visual Studio Code}, PostgreSQL} \\
+\end{tabularx}
+}
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont Education} \hfill \rule{0.85\linewidth}{1.2pt}
+
+\vspace{-0.3em}
+
+\textbf{Technological University of Peru} \hfill Lima, Peru\\
+\spaced{10}{B}\spaced{8}{ACHELOR IN} \spaced{10}{S}\spaced{8}{YSTEMS} \spaced{10}{E}\spaced{8}{NGINEERING}
+\hfill
+{\fontsize{8}{10}\extralight\selectfont Aug. 2024 - Present}
+
+\textbf{IDAT Institute} \hfill Lima, Peru\\
+\spaced{10}{T}\spaced{8}{ECHNICIAN IN} \spaced{10}{I}\spaced{8}{NFORMATION} \spaced{10}{S}\spaced{8}{YSTEMS} \spaced{10}{D}\spaced{8}{EVELOPMENT}
+\hfill
+{\fontsize{8}{10}\extralight\selectfont Mar. 2022 - 2024}
+
+%--------------------
+{\color{blue}\fontsize{14.5}{18}\bfseries\selectfont References} \hfill \rule{0.83\linewidth}{1.2pt}
+
+Available upon request.
+
+\includepdf[pages=-]{../assets/constancia_idat.pdf}
+\includepdf[pages=-,landscape,fitpaper=true]{../assets/linux_essentials.pdf}
+\includepdf[pages=-,landscape,fitpaper=true]{../assets/programming_essentials_in_python.pdf}
+\includepdf[pages=-]{../assets/first_certificate_in_english.pdf}
+
+\end{document}
