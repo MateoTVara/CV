@@ -3,8 +3,8 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "xelatex",
-      "tools": ["xelatex"]
-    }
+      "tools": ["xelatex"],
+    },
   ],
   "latex-workshop.latex.tools": [
     {
@@ -14,8 +14,9 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "%DOC%"
-      ]
-    }
-  ]
+        "%DOC%",
+      ],
+    },
+  ],
+  "editor.wordWrap": "on",
 }

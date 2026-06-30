@@ -4,4 +4,6 @@
 *.log
 *.out
 *.synctex.gz
+*.xdv
+*.pdf
 /tmp
