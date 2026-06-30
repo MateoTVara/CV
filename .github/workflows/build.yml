@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,6 +22,7 @@ jobs:
             es/MateoTorres.tex
             en/MateoTorres.tex
           latexmk_use_xelatex: true
+          work_in_root_file_dir: true
 
       - name: Release
         uses: softprops/action-gh-release@v3
