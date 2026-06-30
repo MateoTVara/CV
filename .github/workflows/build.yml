@@ -24,10 +24,15 @@ jobs:
           latexmk_use_xelatex: true
           work_in_root_file_dir: true
 
+      - name: Rename PDFs
+        run: |
+          cp es/MateoTorres.pdf MateoTorres_es.pdf
+          cp en/MateoTorres.pdf MateoTorres_en.pdf
+
       - name: Release
         uses: softprops/action-gh-release@v3
         with:
           tag_name: latest
           files: |
-            es/MateoTorres.pdf
-            en/MateoTorres.pdf
+            MateoTorres_es.pdf
+            MateoTorres_en.pdf
