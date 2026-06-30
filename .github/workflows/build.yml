@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Build CVs
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            es/MateoTorres.tex
+            en/MateoTorres.tex
+          latexmk_use_xelatex: true
+
+      - name: Release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: latest
+          files: |
+            es/MateoTorres.pdf
+            en/MateoTorres.pdf
